@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumWebDriver_HomeTask1 {
 
@@ -13,7 +14,7 @@ public class SeleniumWebDriver_HomeTask1 {
 
     @BeforeAll
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

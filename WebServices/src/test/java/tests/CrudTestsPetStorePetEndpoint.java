@@ -10,7 +10,6 @@ import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-//@RunWith(SerenityRunner.class)
 public class CrudTestsPetStorePetEndpoint {
 
     public static final endpoints.PetStorePetEndpoint PET_STORE_PET_ENDPOINT = new PetStorePetEndpoint();

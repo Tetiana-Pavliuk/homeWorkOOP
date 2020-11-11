@@ -1,0 +1,11 @@
+/*.bat
+/*.lnk
+/bin/
+/tagret/
+.classpath
+.project
+.metadata/
+.settings/
+.idea/
+*.iml
+serenity-automation-mentoring/target

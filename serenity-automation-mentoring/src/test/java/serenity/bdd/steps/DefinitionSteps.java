@@ -27,4 +27,49 @@ public class DefinitionSteps {
         endUser.should_see_definition(definition);
     }
 
+
+    @Given("Barsic is created")
+    public void givenBarsicIsCreated() {
+        endUser.createBarsik();
+    }
+
+    @When("we get the response of creation on the endpoint")
+    public void whenWeGetTheResponseOfCreationOnTheEndpoint() { endUser.createPet(); }
+
+    @Then("we verify that created pet is Barsic")
+    public void thenWeVerifyThatCreatedPetIsBarsic() {
+        endUser.verifyPet();
+    }
+
+
+    @Given("the pet is created")
+    public void givenThePetIsCreated() {
+        endUser.createPetForUpdate();
+    }
+
+    @When("the user updates pet")
+    public void whenTheUserUpdatesPet() {
+        endUser.updatePet();
+    }
+
+    @Then("the pet is updated")
+    public void thePetIsUpdated() {
+        endUser.checkUpdatePet();
+    }
+
+
+    @Given("the user creates pet")
+    public void givenTheUserCreatesPet() {
+        endUser.createPetForDelete();
+    }
+
+    @When("the user deletes pet")
+    public void whenTheUserDeletesPet() {
+        endUser.deletePet();
+    }
+
+    @Then("the search for pet returns 404")
+    public void theSearchForPetReturns404() {
+        endUser.checkDeletePet();
+    }
 }
